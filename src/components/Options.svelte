@@ -8,7 +8,6 @@
   export let filteredData
   export let selectedCategory
   export let selectedType
-  export let selectedMonth
   export let selectedYear
   export let searchText = ""
   export let row
@@ -94,9 +93,6 @@
       case "Type":
         selectedType = event.detail.value
         break
-      case "Month":
-        selectedMonth = event.detail.value
-        break
       case "Year":
         selectedYear = event.detail.value
         break
@@ -130,8 +126,6 @@
       updateActiveTab("")
     } else if (selectName == "Type") {
       selectedType = ""
-    } else if (selectName == "Month") {
-      selectedMonth = ""
     } else {
       selectedYear = ""
     }
@@ -257,20 +251,6 @@
       placeholder="Select a type"
       on:select={(event) => handleSelect(event, "Type")}
       on:clear={(event) => handleClear("Type")}
-    />
-  </div>
-  <!--Month-->
-  <div class="select-container">
-    <div class="label">Month</div>
-    <Select
-      indicatorSvg={chevron}
-      showChevron={true}
-      {optionIdentifier}
-      {labelIdentifier}
-      items={dataset.months}
-      placeholder="Select a month"
-      on:select={(event) => handleSelect(event, "Month")}
-      on:clear={() => handleClear("Month")}
     />
   </div>
   <!-- Year-->

@@ -9,7 +9,6 @@
   export let dataset
   let selectedCategory = ""
   let selectedType = ""
-  let selectedMonth = ""
   let searchText
   let selectedYear = ""
   $: row = { isOpen: false }
@@ -19,10 +18,8 @@
       .filter((row) => {
         const rowDate = new Date(row.date_string)
         const rowYear = rowDate.getFullYear()
-        const rowMonth = rowDate.toLocaleString("default", { month: "long" })
 
         const matchesYear = selectedYear ? rowYear === selectedYear : true
-        const matchesMonth = selectedMonth ? rowMonth === selectedMonth : true
         const isSelectedCategory = selectedCategory
           ? row.category === selectedCategory
           : true
@@ -42,7 +39,6 @@
 
         return (
           matchesYear &&
-          matchesMonth &&
           matchesAnyCondition &&
           isSelectedCategory &&
           isSelectedType
@@ -65,7 +61,6 @@
       bind:selectedType
       bind:selectedCategory
       bind:searchText
-      bind:selectedMonth
       bind:selectedYear
     />
 
