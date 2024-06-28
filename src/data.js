@@ -1,16 +1,18 @@
 import * as d3Fetch from "d3-fetch"
 
 const URL =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vS-_ERImv22VF5VJU8oWN2g9_uQ4LzJr21zOHHtizHHYTuQJvHZHJGaJE6d1DUDifpiPGqmZL4MIbgU/pub?gid=2021316330&single=true&output=csv"
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vShsC7eSCDCilSURnYXiw0zvQYc8GiJZClBn2YK8Bz8uDp7TxsrzIquS5L5eModVRd5MoO9zlernqP1/pub?gid=0&single=true&output=csv"
 
 export default function getData() {
   const dataPromise = d3Fetch.csv(URL).then((res) => {
+    console.log(res)
+
     const data = res.map((row, index) => {
       return {
         id: index,
         tableItem: {
           title: row.title,
-          quote: row.quote,
+          quote: row.description,
           sources: [
             [row.source_1, row.source_name_1],
             [row.source_2, row.source_name_2],
@@ -19,9 +21,9 @@ export default function getData() {
           image_url: row.image_url,
           image_source: row.image_source,
         },
-        category: row.category,
-        category_name: row.category_name,
-        type: row.type,
+        category: row.sector,
+        category_name: row.sector,
+        type: row.sector,
         date_string: row.date,
         date: "",
       }
