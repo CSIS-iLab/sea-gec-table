@@ -8,7 +8,6 @@
   export let filteredData
   export let selectedCategory
   export let selectedType
-  export let selectedSpeaker
   export let selectedMonth
   export let selectedYear
   export let searchText = ""
@@ -89,9 +88,6 @@
     }
 
     switch (selectName) {
-      case "Speaker":
-        setSelectedSpeaker(event.detail.value)
-        break
       case "Category":
         setSelectedCategory(event)
         break
@@ -116,13 +112,6 @@
     switchRowBottomLine()
   }
 
-  function setSelectedSpeaker(value) {
-    const index = dataset.speaker.findIndex((element) =>
-      element.includes(value),
-    )
-    selectedSpeaker = dataset.speaker[index]
-  }
-
   function setSelectedCategory(event) {
     const value = event.target ? event.target.value : event.detail.value
     updateActiveTab(value)
@@ -139,8 +128,6 @@
     if (selectName === "Category") {
       selectedCategory = ""
       updateActiveTab("")
-    } else if (selectName === "Speaker") {
-      selectedSpeaker = ""
     } else if (selectName == "Type") {
       selectedType = ""
     } else if (selectName == "Month") {
@@ -258,20 +245,6 @@
 <!-- dropdown filters -->
 
 <div class="selects">
-  <!--Speaker-->
-  <div class="select-container">
-    <div class="label">Speaker</div>
-    <Select
-      indicatorSvg={chevron}
-      showChevron={true}
-      {optionIdentifier}
-      {labelIdentifier}
-      items={dataset.speaker_name}
-      placeholder="Select a speaker"
-      on:select={(event) => handleSelect(event, "Speaker")}
-      on:clear={() => handleClear("Speaker")}
-    />
-  </div>
   <!--Type-->
   <div class="select-container">
     <div class="label">Type</div>

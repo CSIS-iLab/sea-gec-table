@@ -13,7 +13,6 @@
     "date",
     "event",
     "category",
-    "speaker",
     "type of resource",
   ]
 
@@ -45,7 +44,6 @@
     "Event",
     "Date (EST)",
     "Category",
-    "Speaker",
     "Type of Resource",
   ]
 
@@ -203,10 +201,6 @@
             <!-- event category -->
             <td class="table__body__cell table__body__cell--data"
               >{rows.category}</td
-            >
-            <!-- event speaker -->
-            <td class="table__body__cell table__body__cell--data"
-              >{rows.speaker}</td
             >
             <!-- event type -->
             <td class="table__body__cell table__body__cell--data"

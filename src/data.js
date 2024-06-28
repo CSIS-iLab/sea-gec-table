@@ -38,17 +38,11 @@ export default function getData() {
         key_moment: row.key_moment ? row.key_moment : null,
         category: row.category,
         category_name: row.category_name,
-        speaker: row.speaker,
-        speaker_name: "",
         type: row.type,
         date_string: row.date,
         date: "",
       }
     })
-
-    const speaker = formatSpeaker(data)
-
-    const speaker_name = createAndAssignSpeakerNames(data)
 
     const type = formatType(data)
 
@@ -62,9 +56,6 @@ export default function getData() {
       data: data,
       categories: categories,
       dates: dates,
-      speaker: speaker,
-      //speaker without title - for dropdown
-      speaker_name: speaker_name,
       type: type,
       months: months,
       years: years,
@@ -88,23 +79,6 @@ function createYearList(data) {
   return Array.from(uniqueYearsSet).sort((a, b) => a - b) // Numeric sort
 }
 
-function createAndAssignSpeakerNames(array) {
-  let speaker_Name_Array = []
-
-  for (let i = 0; i < array.length; i++) {
-    let name = array[i].speaker.split(",")[0]
-    if (array[i].speaker != "") {
-      array[i].speaker_name = name
-
-      if (!speaker_Name_Array.includes(name)) {
-        speaker_Name_Array.push(name)
-      }
-    }
-  }
-
-  return speaker_Name_Array.sort((a, b) => a.localeCompare(b))
-}
-
 function createAndAssignDateObjects(array) {
   let dates = []
   let date_string = []
@@ -122,10 +96,6 @@ function createAndAssignDateObjects(array) {
   }
 
   return dates
-}
-
-function formatSpeaker(array) {
-  return [...new Set(array.map((el) => el.speaker))]
 }
 
 function formatType(array) {

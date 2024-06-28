@@ -9,7 +9,6 @@
   export let dataset
   let selectedCategory = ""
   let selectedType = ""
-  let selectedSpeaker = ""
   let selectedMonth = ""
   let searchText
   let selectedYear = ""
@@ -24,10 +23,6 @@
 
         const matchesYear = selectedYear ? rowYear === selectedYear : true
         const matchesMonth = selectedMonth ? rowMonth === selectedMonth : true
-        const matchesSpeaker = selectedSpeaker
-          ? row.speaker.trim().toLowerCase() ===
-            selectedSpeaker.trim().toLowerCase()
-          : true
         const isSelectedCategory = selectedCategory
           ? row.category === selectedCategory
           : true
@@ -43,13 +38,11 @@
           matchesText(row.tableItem.title),
           matchesText(row.category),
           matchesText(row.type),
-          matchesText(row.speaker),
         ].some(Boolean)
 
         return (
           matchesYear &&
           matchesMonth &&
-          matchesSpeaker &&
           matchesAnyCondition &&
           isSelectedCategory &&
           isSelectedType
@@ -69,7 +62,6 @@
       {dataset}
       filteredData={filteredData()}
       bind:row
-      bind:selectedSpeaker
       bind:selectedType
       bind:selectedCategory
       bind:searchText
