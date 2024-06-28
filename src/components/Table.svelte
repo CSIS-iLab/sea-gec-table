@@ -234,41 +234,9 @@
                             ,
                           {/if}</a
                         >
-                        {#if source[2] == 1}
-                          <span
-                            class="icon-tag-container"
-                            use:tooltip={{ theme: "poni" }}
-                            aria-hidden="true"
-                            aria-label="A vpn is required to view this source."
-                          >
-                            <!-- Insert your VPN Icon here -->
-                            <Icon name="Icon-info-alt" class="icon" />
-                          </span>
-                        {/if}
                       {/if}
                     {/each}
-                    {#if rows.tableItem.translation_source_link != ""}
-                      <br />
-                      Translation Source:
-                      <a
-                        href={rows.tableItem.translation_source_link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >{rows.tableItem.translation_source_name}</a
-                      >
-                    {/if}
                   </div>
-                  <!-- <div class="link">
-                    {#if rows.tableItem.translation_source_link != ""}
-                      Translation Source:
-                      <a
-                        href={rows.tableItem.translation_source_link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >{rows.tableItem.translation_source_name}</a
-                      >
-                    {/if}
-                  </div> -->
                 </div>
                 {#if rows.tableItem.image_url && rows.tableItem.image_source}
                   <div class="img-container">
