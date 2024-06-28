@@ -15,8 +15,6 @@ export default function getData() {
           quote: row.description,
           sources: [
             [row.source_1, row.source_name_1],
-            [row.source_2, row.source_name_2],
-            [row.source_3, row.source_name_3],
           ],
           image_url: row.image_url,
           image_source: row.image_source,
