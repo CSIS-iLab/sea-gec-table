@@ -3,20 +3,20 @@
 // Variables
 
 /*Color palette: https://coolors.co/b68600-ffc72c-ebdbc1-eaeaea-901a1a-350000-590000*/
-$color-dark-yellow: rgba(182, 134, 0, 1); //#B68600
-$color-light-yellow: rgba(255, 199, 44, 1); //#FFC72C
-$color-off-white: rgba(235, 219, 193, 1); //#EBDBC1
-$color-light-red: rgba(144, 26, 26, 1); //#901A1A
-$color-main-red: rgba(89, 0, 0, 1); //#590000
-$color-dark-red: rgba(53, 0, 0, 1); //#350000
+$color-dark-yellow: #F4A261; //#B68600
+$color-light-yellow: #e9c46a; //#FFC72C
+$color-off-white: rgba(235, 255, 250, 1); //#EBFFFA
+$color-light-red: #01b98e; //#901A1A
+$color-main-red: #045642; //#590000
+$color-dark-red: #054233; //#350000
 $color-platinum: rgba(234, 234, 234, 1); //#EAEAEA
 $color-placeholder: rgba(74, 70, 67, 1); //#4A4643
 $color-antique-white: rgba(243, 233, 216, 1); //#F3E9D8
-$color-sunset: rgba(225, 200, 157, 1); //#E1C89D
+$color-sunset: #eae0d5; //#E1C89D
 
 $color-text-gray-200: rgba(126, 134, 148, 1); //#7E8694
 $color-charcoal: rgba(63, 79, 95, 1); //#3F4F5F  -- consider gray-300
-$color-khaki: rgba(187, 167, 130, 1); //#BBA782
+$color-khaki: #C6AC8F; //#BBA782
 $color-burlywood: rgba(222, 184, 135, 1); //#DEB887
 
 /*----------  Colors we're using from template ----------*/
@@ -48,11 +48,12 @@ $color-brand-blue-700: rgba(0, 84, 164, 1);
 $color-brand-blue-800: rgba(1, 43, 105, 1);
 
 /*----------  Fonts  ----------*/
-$font__jost: jost, sans-serif;
-$font__righteous: righteous, cursive;
+$font__expo-serif-pro: "Expo Serif Pro", serif;
+$font__source-sans-pro: "Source Sans 3", sans-serif;
+$font__synthese: "Synthese", sans-serif;
 
-$font-family-default: $font__jost;
-$font-family-heading: $font__righteous;
+$font-family-default: $font__source-sans-pro;
+$font-family-heading: $font__synthese;
 $font-size-default: 16px;
 $font-weight-default: 400;
 $font-weight-bold: 800;
