@@ -5,7 +5,7 @@
 <div class="wrapper">
   <main class="container intro-content">
     <div class="intro-content__container">
-      <div class="intro-content__flex-left">
+      <div class="intro-content">
         <p class="intro-content__overline--regular">
           By the Project on Nuclear Issues
         </p>

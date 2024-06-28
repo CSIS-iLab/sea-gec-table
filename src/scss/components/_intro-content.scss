@@ -71,7 +71,7 @@ main {
 
   &__introduction {
     margin-bottom: rem(16);
-    max-width: $size__content-max-width;
+    // max-width: $size__content-max-width;
     @extend %text-style-paragraph-1;
     color: $color-off-white;
   }
