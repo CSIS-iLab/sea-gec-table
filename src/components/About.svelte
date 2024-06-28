@@ -7,14 +7,7 @@
     <h2 class="about__subtitle">About</h2>
     <div class="about__description">
       <p>
-        Founded in 2003, the Project on Nuclear Issues (PONI) is the premier
-        networked community of next generation professionals prepared to meet
-        the nuclear challenges of the future. PONI programs provide inclusive,
-        diverse, and creative opportunities for emerging experts to learn about
-        nuclear issues and engage thoughtfully with the nuclear community. PONI
-        also conducts cutting-edge research and analysis on three main topic
-        areas: deterrence and escalation, risk reduction and arms control, and
-        disarmament.
+        The CSIS Southeast Asia Program is the premier forum for sustained high-level policy dialogue focusing on Southeast Asia and U.S. interests in the region. The program provides policy recommendations and support for U.S.–Southeast Asia relations and builds political, economic, and people-to-people ties between the United States and Southeast Asian countries.
       </p>
     </div>
     <div class="about__reports">
@@ -23,10 +16,9 @@
         <li>
           <a
             class="about__reports__link"
-            href="https://features.csis.org/deter-and-divide-russia-nuclear-rhetoric/index.html"
+            href="https://www.csis.org/programs/southeast-asia-program"
             target="_blank"
-            >Deter and Divide: Russia's Nuclear Rhetoric & Escalation Risks in
-            Ukraine<span class="icon-container"
+            >Digital Report Link Goes Here<span class="icon-container"
               ><Icon class="icon__report" name="Icon-open-blank" /></span
             ></a
           >
@@ -46,9 +38,9 @@
       <p class="about__development__description">
         Produced by Mariel de la Garza, José Romero, and Lindsay Urchyk.
         <br />
-        Copyediting by Katherine Stark and Rayna Salam.
+        Copyediting by ____________________.
         <br />
-        Cover design by Michael Kohler.
+        Cover design by ________________.
       </p>
     </div>
     <div class="back-top-container">

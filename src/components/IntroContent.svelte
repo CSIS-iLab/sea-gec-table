@@ -7,18 +7,16 @@
     <div class="intro-content__container">
       <div class="intro-content">
         <p class="intro-content__overline--regular">
-          By the Project on Nuclear Issues
+          By the Southeast Asia Program
         </p>
         <h1 class="intro-content__title">
-          Nuclear Signaling during the War in Ukraine
+          US Investments in the Philippines
         </h1>
         <p class="intro-content__introduction">
-          A curated database of events illustrating the evolution of nuclear
-          threats in the lead-up to—and throughout the first year of—the war in
-          Ukraine, from the <a
+          A curated database of US investments in the Philippines over the last 10 years, from the <a
             class="intro-content__link"
-            href="https://www.csis.org/programs/international-security-program/project-nuclear-issues"
-            target="_blank">CSIS Project on Nuclear Issues</a
+            href="https://www.csis.org/programs/southeast-asia-program"
+            target="_blank">CSIS Southeast Asia Program</a
           >.
         </p>
         <p class="intro-content__more">
