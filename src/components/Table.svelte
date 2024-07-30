@@ -212,14 +212,18 @@
                 <div class="description">
                   <div>{rows.tableItem.quote}</div>
                   <div class="link">
-                    Source:
+                    Source(s):
                     {#each rows.tableItem.sources as source, index}
                       {#if source[0] != ""}
                         <a
                           href={source[0]}
                           target="_blank"
                           rel="noopener noreferrer"
-                          >{source[1]}</a>
+                          >{source[1]}{#if index == 0 && rows.tableItem.sources[1][0] != ""}
+                            ,
+                          {/if}
+                        </a
+                        >
                       {/if}
                     {/each}
                   </div>
