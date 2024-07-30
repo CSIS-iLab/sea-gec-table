@@ -22,6 +22,8 @@
   const optionIdentifier = "value"
   const labelIdentifier = "label"
 
+  const sortedTypes = dataset.type.sort();
+
   function updateActiveTab(val) {
     console.log("updateActiveTab val: ", val)
     const value = val ? val.split("_").join("-") : "all"
@@ -247,7 +249,7 @@
       showChevron={true}
       {optionIdentifier}
       {labelIdentifier}
-      items={dataset.type}
+      items={sortedTypes}
       placeholder="Select a type"
       on:select={(event) => handleSelect(event, "Type")}
       on:clear={(event) => handleClear("Type")}
