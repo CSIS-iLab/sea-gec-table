@@ -16,9 +16,7 @@ export default function getData() {
           sources: [
             [row.source_1, row.source_name_1],
             [row.source_2, row.source_name_2]
-          ],
-          image_url: row.image_url,
-          image_source: row.image_source,
+          ]
         },
         category: row.sector,
         category_name: row.sector,
