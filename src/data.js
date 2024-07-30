@@ -18,7 +18,7 @@ export default function getData() {
             [row.source_2, row.source_name_2]
           ],
           investment_authority: row.investment_authority,
-          amount: row.amount
+          amount: parseInt(row.amount)
         },
         category: row.sector,
         category_name: row.sector,
@@ -28,6 +28,7 @@ export default function getData() {
       }
     })
 
+    console.log(data)
     const type = formatType(data)
 
     const categories = formatCategories(data)

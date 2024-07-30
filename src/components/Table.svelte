@@ -14,6 +14,7 @@
     "event",
     "category",
     "type of resource",
+    "amount"
   ]
 
   function handleClick(e) {
@@ -45,6 +46,7 @@
     "Date (EST)",
     "Category",
     "Type of Resource",
+    "Amount"
   ]
 
   $: sortBy = { col: "event", ascending: true }
@@ -130,6 +132,24 @@
     }
     scrollSync()
   })
+
+  function formatCurrency(value) {
+    if (value >= 1_000_000_000) {
+      let billionValue = (value / 1_000_000_000).toFixed(1);
+      billionValue = billionValue.endsWith('.0') ? billionValue.slice(0, -2) : billionValue;
+      return `$${billionValue} billion`;
+    } else if (value >= 1_000_000) {
+      let millionValue = (value / 1_000_000).toFixed(1);
+      millionValue = millionValue.endsWith('.0') ? millionValue.slice(0, -2) : millionValue;
+      return `$${millionValue} million`;
+    } else {
+      return new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD"
+      }).format(value);
+    }
+  }
+
 </script>
 
 <div class="table__wrapper">
@@ -182,80 +202,82 @@
     <table class="table table__body">
       <tbody>
         {#each filteredData as rows}
-          <tr
-            on:click={(e) => handleClick(e)}
-            class="title table__body__cell--border"
-          >
-            <!-- event name/title -->
-            <td class="table__body__cell table__body__cell--data"
-              ><div class="table__body__cell__title-container">
-                <span class="icon-container" />{rows.tableItem.title}
-              </div></td
+          {#if rows && rows.tableItem}
+            <tr
+              on:click={(e) => handleClick(e)}
+              class="title table__body__cell--border"
             >
-            <!-- event date - displays string value -->
-            <td class="table__body__cell table__body__cell--data"
-              >{rows.date_string}</td
-            >
-            <!-- event category -->
-            <td class="table__body__cell table__body__cell--data"
-              >{rows.category}</td
-            >
-            <!-- event type -->
-            <td class="table__body__cell table__body__cell--data"
-              >{rows.type}</td
-            >
-          </tr>
-          <!--this tr is the stuff under the dropdown -->
-          <tr class="extra-content hide">
-            <td class="table__body__cell" colspan="6">
-              <div class="extra-content__container">
-                <div class="description">
-                  <div>{rows.tableItem.quote}</div>
-                  <div class="link">
-                    Source(s):
-                    {#each rows.tableItem.sources as source, index}
-                      {#if source[0] != ""}
-                        <a
-                          href={source[0]}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          >{source[1]}{#if index == 0 && rows.tableItem.sources[1][0] != ""}
-                            ,
-                          {/if}
-                        </a
-                        >
-                      {/if}
-                    {/each}
-                  </div>
+              <!-- event name/title -->
+              <td class="table__body__cell table__body__cell--data">
+                <div class="table__body__cell__title-container">
+                  <span class="icon-container" />{rows.tableItem.title}
                 </div>
-                {#if rows.tableItem.image_url && rows.tableItem.image_source}
-                  <div class="img-container">
-                    <img
-                      loading="lazy"
-                      src={rows.tableItem.image_url}
-                      alt={rows.tableItem.image_source}
-                    />
-                    <span
-                      ><b>Photo Credit:</b>
-                      {rows.tableItem.image_source}</span
-                    >
+              </td>
+              <!-- event date - displays string value -->
+              <td class="table__body__cell table__body__cell--data">
+                {rows.date_string}
+              </td>
+              <!-- event category -->
+              <td class="table__body__cell table__body__cell--data">
+                {rows.category}
+              </td>
+              <!-- event type -->
+              <td class="table__body__cell table__body__cell--data">
+                {rows.type}
+              </td>
+              <!-- event amount -->
+              <td class="table__body__cell table__body__cell--data">
+                {rows.tableItem.amount !== undefined ? formatCurrency(rows.tableItem.amount) : "N/A"}
+              </td>
+            </tr>
+            <!--this tr is the stuff under the dropdown -->
+            <tr class="extra-content hide">
+              <td class="table__body__cell" colspan="6">
+                <div class="extra-content__container">
+                  <div class="description">
+                    <div>{rows.tableItem.quote}</div>
+                    <div class="link">
+                      Source(s):
+                      {#each rows.tableItem.sources as source, index}
+                        {#if source[0] != ""}
+                          <a
+                            href={source[0]}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >{source[1]}{#if index == 0 && rows.tableItem.sources[1][0] != ""}
+                              ,
+                            {/if}
+                          </a>
+                        {/if}
+                      {/each}
+                    </div>
                   </div>
-                {/if}
-              </div>
-            </td>
-          </tr>
+                  {#if rows.tableItem.image_url && rows.tableItem.image_source}
+                    <div class="img-container">
+                      <img
+                        loading="lazy"
+                        src={rows.tableItem.image_url}
+                        alt={rows.tableItem.image_source}
+                      />
+                      <span><b>Photo Credit:</b> {rows.tableItem.image_source}</span>
+                    </div>
+                  {/if}
+                </div>
+              </td>
+            </tr>
+          {/if}
         {:else}
           <!-- if filters return an empty table -->
           <tr>
-            <td class="table__body__cell table__body__cell--no-data" colspan="6"
-              ><p class="table__body__cell__no-data__title">0 entries found.</p>
+            <td class="table__body__cell table__body__cell--no-data" colspan="6">
+              <p class="table__body__cell__no-data__title">0 entries found.</p>
               <p class="table__body__cell__no-data__desc">
                 Try changing or removing filters to adjust the results.
               </p>
             </td>
           </tr>
         {/each}
-      </tbody>
+      </tbody>      
     </table>
   </div>
 </div>
