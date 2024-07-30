@@ -16,7 +16,9 @@ export default function getData() {
           sources: [
             [row.source_1, row.source_name_1],
             [row.source_2, row.source_name_2]
-          ]
+          ],
+          investment_authority: row.investment_authority,
+          amount: row.amount
         },
         category: row.sector,
         category_name: row.sector,
