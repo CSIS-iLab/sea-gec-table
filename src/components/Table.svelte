@@ -101,6 +101,19 @@
       return (filteredData = filteredData.sort(sortTableItem))
     }
 
+    // Sort by amount as a number
+    if (column == "amount") {
+      filteredData = filteredData.sort((a, b) =>
+        a.tableItem.amount < b.tableItem.amount
+          ? -1 * sortModifier
+          : a.tableItem.amount > b.tableItem.amount
+          ? 1 * sortModifier
+          : 0
+      );
+      console.log("filteredData", filteredData);
+      return;
+    }
+
     filteredData = filteredData.sort(sortDate).sort(sortColumnName)
   }
 
