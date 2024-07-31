@@ -7,23 +7,27 @@
   import Footer from "./Footer.svelte"
 
   export let dataset
-  let selectedCategory = ""
-  let selectedType = ""
+  let selectedSector = ""
+  let selectedInvestmentAuthority = ""
+  let selectedMonth = ""
   let searchText
   let selectedYear = ""
   $: row = { isOpen: false }
 
   $: filteredData = () => {
+    console.log(dataset.data)
     return dataset.data
       .filter((row) => {
         const rowDate = new Date(row.date_string)
         const rowYear = rowDate.getFullYear()
+        const rowMonth = rowDate.toLocaleString("default", { month: "long" })
 
         const matchesYear = selectedYear ? rowYear === selectedYear : true
-        const isSelectedCategory = selectedCategory
-          ? row.category === selectedCategory
+        const matchesMonth = selectedMonth ? rowMonth === selectedMonth : true
+        const isSelectedSector = selectedSector
+          ? row.sector === selectedSector
           : true
-        const isSelectedType = selectedType ? row.type === selectedType : true
+        const isSelectedInvestmentAuthority = selectedInvestmentAuthority ? row.investmentAuthority === selectedInvestmentAuthority : true
 
         const filteredTableItem = searchText
           ? searchText.toLowerCase().trim()
@@ -33,15 +37,16 @@
 
         const matchesAnyCondition = [
           matchesText(row.tableItem.title),
-          matchesText(row.category),
-          matchesText(row.type),
+          matchesText(row.sector),
+          matchesText(row.investmentAuthority),
         ].some(Boolean)
 
         return (
           matchesYear &&
+          matchesMonth &&
           matchesAnyCondition &&
-          isSelectedCategory &&
-          isSelectedType
+          isSelectedSector &&
+          isSelectedInvestmentAuthority
         )
       })
       .sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0))
@@ -58,9 +63,10 @@
       {dataset}
       filteredData={filteredData()}
       bind:row
-      bind:selectedType
-      bind:selectedCategory
+      bind:selectedInvestmentAuthority
+      bind:selectedSector
       bind:searchText
+      bind:selectedMonth
       bind:selectedYear
     />
 

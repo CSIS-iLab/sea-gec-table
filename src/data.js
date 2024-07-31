@@ -5,33 +5,29 @@ const URL =
 
 export default function getData() {
   const dataPromise = d3Fetch.csv(URL).then((res) => {
-    console.log(res)
-
     const data = res.map((row, index) => {
       return {
         id: index,
         tableItem: {
           title: row.title,
-          quote: row.description,
+          description: row.description,
           sources: [
             [row.source_1, row.source_name_1],
             [row.source_2, row.source_name_2]
-          ],
-          investment_authority: row.investment_authority,
-          amount: parseInt(row.amount)
+          ]
         },
-        category: row.sector,
-        category_name: row.sector,
-        type: row.sector,
+        sector: row.sector,
+        investmentAuthority: row.investment_authority,
+        amount: parseInt(row.amount),
         date_string: row.date,
         date: "",
       }
     })
 
-    console.log(data)
-    const type = formatType(data)
+    console.log("Data", data)
+    const investmentAuthority = formatInvestmentAuthority(data)
 
-    const categories = formatCategories(data)
+    const sectors = formatSectors(data)
 
     const dates = createAndAssignDateObjects(data)
 
@@ -39,9 +35,9 @@ export default function getData() {
 
     return {
       data: data,
-      categories: categories,
+      sectors: sectors,
       dates: dates,
-      type: type,
+      investmentAuthority: investmentAuthority,
       years: years,
     }
   })
@@ -82,10 +78,10 @@ function createAndAssignDateObjects(array) {
   return dates
 }
 
-function formatType(array) {
-  return [...new Set(array.map((el) => el.type))]
+function formatInvestmentAuthority(array) {
+  return [...new Set(array.map((el) => el.investmentAuthority))]
 }
 
-function formatCategories(array) {
-  return [...new Set(array.map((el) => el.category))]
+function formatSectors(array) {
+  return [...new Set(array.map((el) => el.sector))]
 }

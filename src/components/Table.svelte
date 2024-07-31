@@ -12,9 +12,9 @@
   const sortByColumns = [
     "date",
     "event",
-    "category",
+    "sector",
     "type of resource",
-    "amount"
+    "amount",
   ]
 
   function handleClick(e) {
@@ -44,9 +44,9 @@
   const headerNames = [
     "Event",
     "Date (EST)",
-    "Category",
-    "Type of Resource",
-    "Amount"
+    "Sector",
+    "Investment Authority",
+    "Amount",
   ]
 
   $: sortBy = { col: "event", ascending: true }
@@ -101,17 +101,16 @@
       return (filteredData = filteredData.sort(sortTableItem))
     }
 
-    // Sort by amount as a number
     if (column == "amount") {
       filteredData = filteredData.sort((a, b) =>
-        a.tableItem.amount < b.tableItem.amount
+        a.amount < b.amount
           ? -1 * sortModifier
-          : a.tableItem.amount > b.tableItem.amount
+          : a.amount > b.amount
           ? 1 * sortModifier
-          : 0
-      );
-      console.log("filteredData", filteredData);
-      return;
+          : 0,
+      )
+      console.log("filteredData", filteredData)
+      return
     }
 
     filteredData = filteredData.sort(sortDate).sort(sortColumnName)
@@ -182,7 +181,7 @@
                   ? (e) => sort(e, name)
                   : ""}
               >
-                <span>{name}</span>
+              <span>{name}</span>
                 {#if sortByColumns.includes(name.toLowerCase())}
                   <div
                     class="sort-icons-container"
@@ -231,16 +230,18 @@
                 {rows.date_string}
               </td>
               <!-- event category -->
-              <td class="table__body__cell table__body__cell--data">
-                {rows.category}
-              </td>
-              <!-- event type -->
-              <td class="table__body__cell table__body__cell--data">
-                {rows.type}
-              </td>
+              <td class="table__body__cell table__body__cell--data"
+                >{rows.sector}</td
+              >
+              <!-- event investment authority -->
+              <td class="table__body__cell table__body__cell--data"
+                >{rows.investmentAuthority}</td
+              >
               <!-- event amount -->
               <td class="table__body__cell table__body__cell--data">
-                {rows.tableItem.amount !== undefined ? formatCurrency(rows.tableItem.amount) : "N/A"}
+                {rows.amount !== undefined
+                  ? formatCurrency(rows.amount)
+                  : "N/A"}
               </td>
             </tr>
             <!--this tr is the stuff under the dropdown -->
@@ -248,7 +249,7 @@
               <td class="table__body__cell" colspan="6">
                 <div class="extra-content__container">
                   <div class="description">
-                    <div>{rows.tableItem.quote}</div>
+                    <div>{rows.tableItem.description}</div>
                     <div class="link">
                       Source(s):
                       {#each rows.tableItem.sources as source, index}
@@ -265,16 +266,6 @@
                       {/each}
                     </div>
                   </div>
-                  {#if rows.tableItem.image_url && rows.tableItem.image_source}
-                    <div class="img-container">
-                      <img
-                        loading="lazy"
-                        src={rows.tableItem.image_url}
-                        alt={rows.tableItem.image_source}
-                      />
-                      <span><b>Photo Credit:</b> {rows.tableItem.image_source}</span>
-                    </div>
-                  {/if}
                 </div>
               </td>
             </tr>

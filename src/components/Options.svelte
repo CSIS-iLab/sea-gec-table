@@ -6,8 +6,9 @@
 
   export let dataset
   export let filteredData
-  export let selectedCategory
-  export let selectedType
+  export let selectedSector
+  export let selectedInvestmentAuthority
+  export let selectedMonth
   export let selectedYear
   export let searchText = ""
   export let row
@@ -15,14 +16,12 @@
   $: totalEntries = filteredData.length
 
   const eventTotal = dataset.data.length
-  function getPGCount(category) {
-    return dataset.data.filter((row) => row.category.includes(category)).length
+  function getPGCount(sector) {
+    return dataset.data.filter((row) => row.sector.includes(sector)).length
   }
 
   const optionIdentifier = "value"
   const labelIdentifier = "label"
-
-  const sortedTypes = dataset.type.sort();
 
   function updateActiveTab(val) {
     console.log("updateActiveTab val: ", val)
@@ -89,11 +88,14 @@
     }
 
     switch (selectName) {
-      case "Category":
-        setSelectedCategory(event)
+      case "Sector":
+        setSelectedSector(event)
         break
-      case "Type":
-        selectedType = event.detail.value
+      case "Investment Authority":
+        selectedInvestmentAuthority = event.detail.value
+        break
+      case "Month":
+        selectedMonth = event.detail.value
         break
       case "Year":
         selectedYear = event.detail.value
@@ -110,10 +112,10 @@
     switchRowBottomLine()
   }
 
-  function setSelectedCategory(event) {
+  function setSelectedSector(event) {
     const value = event.target ? event.target.value : event.detail.value
     updateActiveTab(value)
-    selectedCategory = value
+    selectedSector = value
   }
 
   function handleClear(selectName) {
@@ -123,11 +125,13 @@
       removeExtraContentStyle()
       switchRowBottomLine()
     }
-    if (selectName === "Category") {
-      selectedCategory = ""
+    if (selectName === "Sector") {
+      selectedSector = ""
       updateActiveTab("")
-    } else if (selectName == "Type") {
-      selectedType = ""
+    } else if (selectName == "Investment Authority") {
+      selectedInvestmentAuthority = ""
+    } else if (selectName == "Month") {
+      selectedMonth = ""
     } else {
       selectedYear = ""
     }
@@ -140,7 +144,7 @@
     '<svg class="iconDown" width="16" height="10" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="m0 0 14 15L28 0H0z" fill="#000"/></svg>'
   let chevron = chevronDown
   let isListOpen = false
-  let listCategoryOpen = false
+  let listSectorOpen = false
 
   $: chevron = isListOpen ? chevronUp : chevronDown
 
@@ -215,23 +219,23 @@
     <button
       class="options__btn options__btn--tab options__btn--tab--all options__btn--tab--active options__btn--tab--all--active"
       data-tab={"all"}
-      on:click={(event) => handleSelect(event, "Category")}
+      on:click={(event) => handleSelect(event, "Sector")}
       >All <span
         data-count={"all"}
         class="options__count options__count--active">{eventTotal}</span
       >
     </button>
-    {#each dataset.categories as category}
+    {#each dataset.sectors as sector}
       <button
-        class="options__btn options__btn--tab options__btn--tab--{category} "
-        data-tab={category}
-        value={category}
-        on:click={(event) => handleSelect(event, "Category")}
-        >{category}
+        class="options__btn options__btn--tab options__btn--tab--{sector} "
+        data-tab={sector}
+        value={sector}
+        on:click={(event) => handleSelect(event, "Sector")}
+        >{sector}
         <span
-          data-count={category}
-          class="options__count options__count--{category}"
-          >{getPGCount(category)}</span
+          data-count={sector}
+          class="options__count options__count--{sector}"
+          >{getPGCount(sector)}</span
         >
       </button>
     {/each}
@@ -241,18 +245,18 @@
 <!-- dropdown filters -->
 
 <div class="selects">
-  <!--Type-->
+  <!--Investment Authority-->
   <div class="select-container">
-    <div class="label">Type</div>
+    <div class="label">Investment Authority</div>
     <Select
       indicatorSvg={chevron}
       showChevron={true}
       {optionIdentifier}
       {labelIdentifier}
-      items={sortedTypes}
-      placeholder="Select a type"
-      on:select={(event) => handleSelect(event, "Type")}
-      on:clear={(event) => handleClear("Type")}
+      items={dataset.investmentAuthority}
+      placeholder="Select an investment authority"
+      on:select={(event) => handleSelect(event, "Investment Authority")}
+      on:clear={(event) => handleClear("Investment Authority")}
     />
   </div>
   <!-- Year-->
