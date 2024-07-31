@@ -25,7 +25,7 @@
 
   function updateActiveTab(val) {
     console.log("updateActiveTab val: ", val)
-    const value = val ? val.split("_").join("-") : "all"
+    const value = val ? val.split(" ").join("-") : "all"; // Replaced "_" with " "
     const spanCountActive = document.querySelector(`.options__count--active`)
     const spanCount = document.querySelector(
       `.options__count[data-count="${value}"]`,
@@ -227,14 +227,14 @@
     </button>
     {#each dataset.sectors as sector}
       <button
-        class="options__btn options__btn--tab options__btn--tab--{sector} "
-        data-tab={sector}
+        class="options__btn options__btn--tab options__btn--tab--{sector.replace(' ', '-')} "
+        data-tab={sector.replace(' ', '-')}
         value={sector}
         on:click={(event) => handleSelect(event, "Sector")}
         >{sector}
         <span
-          data-count={sector}
-          class="options__count options__count--{sector}"
+          data-count={sector.replace(' ', '-')}
+          class="options__count options__count--{sector.replace(' ', '-')}"
           >{getPGCount(sector)}</span
         >
       </button>
