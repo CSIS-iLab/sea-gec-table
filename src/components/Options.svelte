@@ -24,31 +24,33 @@
   const labelIdentifier = "label"
 
   function updateActiveTab(val) {
-    console.log("updateActiveTab val: ", val)
+    console.log("updateActiveTab val: ", val);
     const value = val ? val.split(" ").join("-") : "all"; // Replaced "_" with " "
-    const spanCountActive = document.querySelector(`.options__count--active`)
+    const spanCountActive = document.querySelector(`.options__count--active`);
     const spanCount = document.querySelector(
-      `.options__count[data-count="${value}"]`,
-    )
-    spanCountActive.classList.remove("options__count--active")
-    spanCount.classList.add(`options__count--active`)
+      `.options__count[data-count="${value}"]`
+    );
 
-    const activeTab = document.querySelector(`.options__btn--tab--active`)
+    if (spanCountActive) {
+      spanCountActive.classList.remove("options__count--active");
+    }
+
+    if (spanCount) {
+      spanCount.classList.add(`options__count--active`);
+    }
+
     const tabActivate = document.querySelector(
-      `.options__btn--tab[data-tab="${value}"]`,
-    )
-    activeTab.classList.remove(
-      "options__btn--tab--active",
-      "options__btn--tab--Russia--active",
-      "options__btn--tab--Other--active",
-      "options__btn--tab--NATO--active",
-      "options__btn--tab--all--active",
-    )
-    tabActivate.classList.add(
-      "options__btn--tab--active",
-      `options__btn--tab--${value}--active`,
-    )
+      `.options__btn--tab[data-tab="${value}"]`
+    );
+
+    if (tabActivate) {
+      tabActivate.classList.add(
+        "options__btn--tab--active",
+        `options__btn--tab--${value}--active`
+      );
+    }
   }
+
 
   function removeRowActiveTitleStyle() {
     const title = document.querySelectorAll(".title--active")
