@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 
 .table-container {
-  background-color: $color-background-green;
+  background-color: $color-lightest-green;
 
   &__header {
     max-width: $size__page-max-width;

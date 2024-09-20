@@ -44,14 +44,14 @@
   }
 
   &__wrapper {
-    background-color: $color-background-green;
+    background-color: $color-lightest-green;
   }
 
   &__cell {
     &--header {
       color: $color-text-gray-500;
       padding: rem(12) rem(16);
-      background-color: $color-background-green;
+      background-color: $color-lightest-green;
       @extend %text-style-ui-2-bold;
 
       border-bottom: 1px solid $color-borders-gray-400;
@@ -164,12 +164,12 @@
   border-top: 0;
 
   tr {
-    background-color: $color-background-green;
+    background-color: $color-lightest-green;
     transition: $transition__link;
 
     &:hover {
       & .table__body__cell {
-        color: $color-background-green;
+        color: $color-lightest-green;
       }
     }
   }
@@ -195,7 +195,7 @@
       overflow: hidden;
       padding-top: 0;
       padding-bottom: 0;
-      color: $color-background-green;
+      color: $color-lightest-green;
 
       @include breakpoint("medium") {
         padding-left: rem(56);
@@ -434,11 +434,11 @@
 
   .title--active {
     background-color: $color-dark-red;
-    color: $color-background-green;
+    color: $color-lightest-green;
 
     .table__body__cell {
       background-color: $color-dark-red;
-      color: $color-background-green;
+      color: $color-lightest-green;
     }
   }
 }

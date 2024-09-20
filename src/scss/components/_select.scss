@@ -20,7 +20,7 @@
   padding-right: var(--container-padding);
   gap: rem(24);
   // background of entire div containing all dropdowns
-  background-color: $color-background-green;
+  background-color: $color-lightest-green;
 
   @include breakpoint("medium") {
     display: grid;
