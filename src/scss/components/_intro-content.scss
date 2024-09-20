@@ -161,10 +161,15 @@ main {
     padding: rem(20);
     outline: 1px solid $color-darkest-blue;
     box-shadow: 0 rem(4) rem(8) rgba(0, 0, 0, 0.1);
-    color: $color-darkest-blue;
+    border-radius: 3px;
 
     h1 {
       font-size: 80px;
+      color: $color-darkest-blue;
+    }
+
+    h2 {
+      color: $color-darkest-orange;
     }
   }
 
