@@ -1,5 +1,5 @@
 <script>
-  import Icon from "./Icons.svelte"
+  import Icon from "./Icons.svelte";
 </script>
 
 <div class="wrapper">
@@ -9,11 +9,10 @@
         <p class="intro-content__overline--regular">
           By the Southeast Asia Program
         </p>
-        <h1 class="intro-content__title">
-          US Investments in the Philippines
-        </h1>
+        <h1 class="intro-content__title">US Investments in the Philippines</h1>
         <p class="intro-content__introduction">
-          A curated database of US investments in the Philippines over the last 10 years, from the <a
+          A curated database of US investments in the Philippines over the last
+          10 years, from the <a
             class="intro-content__link"
             href="https://www.csis.org/programs/southeast-asia-program"
             target="_blank">CSIS Southeast Asia Program</a
@@ -27,7 +26,69 @@
           >
         </p>
       </div>
-      <div class="intro-content__flex-right"></div>
+    </div>
+    <!--GRID-->
+    <div class="intro-content__grid">
+      <div class="intro-content__grid-item">
+        <div
+          class="flourish-embed flourish-chart"
+          data-src="visualisation/19490897?39773"
+        >
+          <script
+            src="https://public.flourish.studio/resources/embed.js"
+          ></script><noscript
+            ><img
+              src="https://public.flourish.studio/visualisation/19490897/thumbnail"
+              width="100%"
+              alt="chart visualization"
+            /></noscript
+          >
+        </div>
+      </div>
+      <div class="intro-content__grid-item">
+        <h1>2024</h1>
+        <h3>Biggest Year for Investment</h3>
+      </div>
+      <div class="intro-content__grid-item">
+        <div
+          class="flourish-embed flourish-chart"
+          data-src="visualisation/19489806?39773"
+        >
+          <script
+            src="https://public.flourish.studio/resources/embed.js"
+          ></script><noscript
+            ><img
+              src="https://public.flourish.studio/visualisation/19489806/thumbnail"
+              width="100%"
+              alt="chart visualization"
+            /></noscript
+          >
+        </div>
+      </div>
+      <div class="intro-content__grid-item">
+        <h1>Renewable Energy</h1>
+        <h3>Sector with Greatest Investment</h3>
+      </div>
+      <div class="intro-content__grid-item">
+        <div
+          class="flourish-embed flourish-chart"
+          data-src="visualisation/19490010?39773"
+        >
+          <script
+            src="https://public.flourish.studio/resources/embed.js"
+          ></script><noscript
+            ><img
+              src="https://public.flourish.studio/visualisation/19490010/thumbnail"
+              width="100%"
+              alt="chart visualization"
+            /></noscript
+          >
+        </div>
+      </div>
+      <div class="intro-content__grid-item">
+        <h1>$7.5 Billion</h1>
+        <h3>Single Largest Investment</h3>
+      </div>
     </div>
   </main>
 </div>
