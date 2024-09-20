@@ -37,40 +37,14 @@
         <h2>Biggest Year for Investment</h2>
       </div>
       <div class="intro-content__grid-item">
-        <div
-          class="flourish-embed flourish-chart"
-          data-src="visualisation/19489806?39773"
-        >
-          <script
-            src="https://public.flourish.studio/resources/embed.js"
-          ></script><noscript
-            ><img
-              src="https://public.flourish.studio/visualisation/19489806/thumbnail"
-              width="100%"
-              alt="chart visualization"
-            /></noscript
-          >
-        </div>
+        <iframe src='https://flo.uri.sh/visualisation/19489806/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
       </div>
       <div class="intro-content__grid-item">
         <h1>Renewable Energy</h1>
         <h2>Sector with Greatest Investment</h2>
       </div>
       <div class="intro-content__grid-item">
-        <div
-          class="flourish-embed flourish-chart"
-          data-src="visualisation/19490010?39773"
-        >
-          <script
-            src="https://public.flourish.studio/resources/embed.js"
-          ></script><noscript
-            ><img
-              src="https://public.flourish.studio/visualisation/19490010/thumbnail"
-              width="100%"
-              alt="chart visualization"
-            /></noscript
-          >
-        </div>
+        <iframe src='https://flo.uri.sh/visualisation/19490010/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
       </div>
       <div class="intro-content__grid-item">
         <h1>$7.5 Billion</h1>
