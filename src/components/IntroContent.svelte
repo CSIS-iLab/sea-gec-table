@@ -47,7 +47,7 @@
       </div>
       <div class="intro-content__grid-item">
         <h1>2024</h1>
-        <h3>Biggest Year for Investment</h3>
+        <h2>Biggest Year for Investment</h2>
       </div>
       <div class="intro-content__grid-item">
         <div
@@ -67,7 +67,7 @@
       </div>
       <div class="intro-content__grid-item">
         <h1>Renewable Energy</h1>
-        <h3>Sector with Greatest Investment</h3>
+        <h2>Sector with Greatest Investment</h2>
       </div>
       <div class="intro-content__grid-item">
         <div
@@ -87,7 +87,7 @@
       </div>
       <div class="intro-content__grid-item">
         <h1>$7.5 Billion</h1>
-        <h3>Single Largest Investment</h3>
+        <h2>Single Largest Investment</h2>
       </div>
     </div>
   </main>
