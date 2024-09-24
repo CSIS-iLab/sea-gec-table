@@ -33,19 +33,19 @@ label[aria-hidden="true"],
 
   &__input {
     border: 0;
-    background-color: $color-lightest-green;
+    background-color: $color-beige;
     padding-left: rem(32);
     padding-right: rem(32);
     padding-top: rem(8);
     padding-bottom: rem(8);
 
     &::placeholder {
-      color: $color-placeholder;
+      color: $color-charcoal-a11y;
     }
 
     &:focus {
       outline: 0;
-      box-shadow: 0 1px $color-dark-red;
+      box-shadow: 0 1px $color-indigo-dye;
       border-radius: 0;
     }
 

@@ -336,7 +336,7 @@
       transform: scaleX(-1) rotate(-35deg);
       display: inline-block;
       line-height: 1rem;
-      color: $color-light-red;
+      color: $color-lapis-lazuli;
       text-align: center;
       font-size: 14px;
       position: absolute;
@@ -348,7 +348,7 @@
   :global(.selectContainer) {
     --internalPadding: 0 4px 0 0 !important;
     --itemFirstBorderRadius: 2px;
-    --placeholderColor: $color-placeholder;
+    --placeholderColor: $color-charcoal-a11y;
   }
 
   :global(.selectContainer .item) {
@@ -405,17 +405,15 @@
   }
 
   :global(.selectedItem) {
-    color: $color-main-red;
+    color: $color-lapis-lazuli-a11y;
   }
   .select-container :global(.selectContainer:hover .indicator) {
-    // $color-light-red
-    filter: invert(14%) sepia(52%) saturate(5603%) hue-rotate(355deg)
-      brightness(82%) contrast(85%);
+    // $color-lapis-lazuli
+    filter: invert(17%) sepia(41%) saturate(5840%) hue-rotate(184deg) brightness(95%) contrast(97%);
   }
 
   .select-container :global(.selectContainer:focus-within .indicator) {
-    // $color-light-red
-    filter: invert(14%) sepia(52%) saturate(5603%) hue-rotate(355deg)
-      brightness(82%) contrast(85%);
+    // $color-lapis-lazuli
+    filter: invert(17%) sepia(41%) saturate(5840%) hue-rotate(184deg) brightness(95%) contrast(97%);
   }
 </style>

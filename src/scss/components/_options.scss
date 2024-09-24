@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 
 .options {
-  background-color: $color-lightest-green;
+  background-color: $color-beige;
 
   &__container {
     padding-left: var(--container-padding);
@@ -67,13 +67,13 @@
       padding-bottom: rem(16);
       padding-left: rem(8);
       padding-right: rem(4);
-      border-bottom: 3px solid $color-lightest-green;
+      border-bottom: 3px solid $color-beige;
       margin-right: rem(16);
-      color: $color-main-red;
+      color:$color-lapis-lazuli-a11y;
 
       .options__count {
-        color: $color-main-red;
-        background-color: $color-sunset;
+        color: $color-beige;
+        background-color: $color-persimmon-a11y;
         transition:
           background-color 0.3s ease-in-out,
           color 0.3s ease-in-out;
@@ -81,12 +81,12 @@
     }
 
     &--tab:hover {
-      color: $color-light-red;
-      border-bottom: 3px solid $color-light-yellow;
+      color: $color-persimmon-a11y;
+      border-bottom: 3px solid $color-persimmon-a11y;
 
       .options__count {
-        color: $color-main-red;
-        background-color: $color-light-yellow;
+        color: $color-beige;
+        background-color: $color-lapis-lazuli-a11y  ;
         transition:
           background-color 0.3s ease-in-out,
           color 0.3s ease-in-out;
@@ -94,12 +94,12 @@
     }
 
     &--tab--active {
-      border-bottom: 3px solid $color-main-red;
+      border-bottom: 3px solid $color-lapis-lazuli-a11y;
       transition: border-bottom 0.3s ease-in-out;
 
       .options__count {
-        background-color: $color-dark-red;
-        color: $color-lightest-green;
+        background-color: $color-indigo-dye;
+        color: $color-beige;
       }
     }
 
@@ -109,7 +109,7 @@
   }
 
   &__table-total-entries {
-    color: $color-placeholder;
+    color: $color-charcoal-a11y;
     margin-right: rem(16);
     @extend %text-style-ui-5;
   }
@@ -133,7 +133,7 @@
       color: $color-text-white;
       background-color: $color-text-gray-400;
       transition:
-        background-color 0.3s ease-in-out,
+        background-color 0.3s ease-in-out,  
         color 0.3s ease-in-out;
     }
   }

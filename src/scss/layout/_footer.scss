@@ -2,13 +2,13 @@
 
 .footer {
   @extend %text-style-paragraph-2;
-  color: $color-light-yellow;
+  color: $color-mid-orange;
   padding-top: rem(48);
   padding-bottom: rem(32);
   padding-right: var(--container-padding);
   padding-left: var(--container-padding);
-  background-color: $color-main-red;
-  border-top: 1px solid $color-light-red;
+  background-color: $color-indigo-dye;
+  border-top: 1px solid $color-beige;
 
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -41,11 +41,11 @@
   }
 
   a {
-    color: $color-light-yellow;
+    color: $color-mid-orange;
     transition: color 0.3s ease-in-out;
 
     &:hover {
-      color: $color-dark-yellow;
+      color: $color-navajo-white;
       text-decoration: none;
     }
   }
@@ -59,11 +59,11 @@
     margin-bottom: rem(24);
 
     a {
-      color: $color-light-yellow;
+      color: $color-mid-orange;
       transition: color 0.3s ease-in-out;
 
       &:hover {
-        color: $color-dark-yellow;
+        color: $color-navajo-white;
         text-decoration: none;
       }
 
@@ -86,7 +86,7 @@
 
   &__address {
     grid-area: address;
-    color: $color-light-yellow;
+    color: $color-mid-orange;
     margin-top: rem(11);
     font-style: normal;
 
@@ -109,11 +109,11 @@
     }
 
     a {
-      color: $color-light-yellow;
+      color: $color-mid-orange;
       transition: color 0.3s ease-in-out;
 
       &:hover {
-        color: $color-dark-yellow;
+        color: $color-navajo-white;
         text-decoration: none;
       }
     }
@@ -121,7 +121,7 @@
 
   &__copyright {
     grid-area: copyright;
-    color: $color-light-yellow;
+    color: $color-mid-orange;
     @extend %text-style-ui-4;
     margin-top: rem(32);
 

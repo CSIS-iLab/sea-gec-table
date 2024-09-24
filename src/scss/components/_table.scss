@@ -44,14 +44,14 @@
   }
 
   &__wrapper {
-    background-color: $color-lightest-green;
+    background-color: $color-beige;
   }
 
   &__cell {
     &--header {
       color: $color-text-gray-500;
       padding: rem(12) rem(16);
-      background-color: $color-lightest-green;
+      background-color: $color-beige;
       @extend %text-style-ui-2-bold;
 
       border-bottom: 1px solid $color-borders-gray-400;
@@ -164,12 +164,12 @@
   border-top: 0;
 
   tr {
-    background-color: $color-lightest-green;
+    background-color: $color-beige;
     transition: $transition__link;
 
     &:hover {
       & .table__body__cell {
-        color: $color-lightest-green;
+        color: $color-beige;
       }
     }
   }
@@ -183,19 +183,19 @@
   }
 
   .title:hover {
-    background-color: $color-dark-red;
+    background-color: $color-indigo-dye;
     transition: $transition__link;
   }
 
   .extra-content {
-    background-color: $color-main-red;
+    background-color: $color-lapis-lazuli-a11y;
 
     .table__body__cell {
       padding-left: 6vw;
       overflow: hidden;
       padding-top: 0;
       padding-bottom: 0;
-      color: $color-lightest-green;
+      color: $color-beige;
 
       @include breakpoint("medium") {
         padding-left: rem(56);
@@ -403,7 +403,7 @@
           position: absolute;
           width: 9px;
           height: 2px;
-          background-color: $color-light-red;
+          background-color: $color-persimmon;
           transition: $transition__link;
         }
 
@@ -433,12 +433,12 @@
   }
 
   .title--active {
-    background-color: $color-dark-red;
-    color: $color-lightest-green;
+    background-color: $color-indigo-dye;
+    color: $color-beige;
 
     .table__body__cell {
-      background-color: $color-dark-red;
-      color: $color-lightest-green;
+      background-color: $color-indigo-dye;
+      color: $color-beige;
     }
   }
 }

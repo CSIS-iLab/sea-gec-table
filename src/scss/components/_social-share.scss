@@ -10,12 +10,12 @@
   &__link {
     @include font-size(16px);
     padding: rem(8);
-    color: $color-light-yellow;
+    color: $color-persimmon-a11y;
     transition: $transition__link;
-    fill: $color-light-yellow;
+    fill: $color-persimmon-a11y;
 
     &:hover {
-      fill: $color-dark-yellow;
+      fill: $color-orange-crayola;
     }
 
     &:focus {
@@ -34,16 +34,16 @@
   &__link {
     @include font-size(16px);
     padding: rem(8);
-    color: $color-light-yellow;
-    fill: $color-light-yellow;
+    color: $color-mid-orange;
+    fill: $color-mid-orange;
     transition: $transition__link;
 
     &:hover {
-      fill: $color-dark-yellow;
+      fill: $color-navajo-white;
     }
 
     &:focus {
-      fill: $color-light-yellow;
+      fill: $color-navajo-white;
       outline: 3px solid $color-focus-outline;
     }
   }

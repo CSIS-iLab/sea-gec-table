@@ -1,8 +1,8 @@
 @use "../abstracts/" as *;
 
 .about {
-  color: $color-darkest-blue;
-  background-color: $color-main-red;
+  color: $color-beige;
+  background-color: $color-indigo-dye;
   padding-top: rem(80);
   padding-bottom: rem(120);
   padding-left: var(--container-padding);
@@ -52,7 +52,7 @@
 
     &__link {
       @extend %text-style-ui-2;
-      color: $color-light-yellow;
+      color: #fb8247;
       text-decoration: none;
 
       &--back-top {
@@ -64,31 +64,31 @@
 
       .icon-container {
         margin-left: rem(4);
-        fill: $color-light-yellow;
+        fill: $color-mid-orange;
       }
 
       &:hover {
-        color: $color-dark-yellow;
+        color: $color-navajo-white;
         transition: $transition__link;
 
         .icon-container {
-          fill: $color-dark-yellow;
+          fill: $color-navajo-white;
           transition: $transition__link;
         }
       }
 
       &:focus {
-        color: $color-main-red;
-        background-color: $color-off-white;
+        color: $color-lapis-lazuli-a11y;
+        background-color: $color-beige;
         outline: 0;
 
         .icon-container {
-          fill: $color-main-red;
+          fill: $color-lapis-lazuli-a11y;
         }
       }
 
       &:visited {
-        color: $color-dark-yellow;
+        color: $color-persimmon;
 
         .icon-container {
           fill: $color-dark-yellow;
@@ -124,8 +124,8 @@
       }
 
       &:focus {
-        color: $color-main-red;
-        background-color: $color-off-white;
+        color: $color-lapis-lazuli-a11y;
+        background-color: $color-beige;
         outline: 0;
       }
     }
@@ -145,26 +145,26 @@
 
     &__link {
       @extend %text-style-ui-3;
-      color: $color-light-yellow;
+      color: $color-mid-orange;
 
       .back-top__icon-container {
-        fill: $color-light-yellow;
+        fill: $color-mid-orange;
         transition: $transition__link;
       }
 
       &:hover {
-        color: $color-dark-yellow;
+        color: $color-navajo-white;
         transition: $transition__link;
 
         .back-top__icon-container {
-          fill: $color-dark-yellow;
+          fill: $color-navajo-white;
           transition: $transition__link;
         }
       }
 
       &:focus {
-        color: $color-main-red;
-        background-color: $color-off-white;
+        color: $color-lapis-lazuli-a11y;
+        background-color: $color-beige;
         outline: 0;
 
         .back-top__icon-container {

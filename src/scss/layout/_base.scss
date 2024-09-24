@@ -26,18 +26,13 @@
 
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 9px $color-dark-yellow;
+    -webkit-box-shadow: inset 0 0 9px $color-navajo-white;
   }
-}
-
-// TODO Update focus color when components are completed
-*:focus {
-  // outline: 2px solid $color-link-primary-200;
 }
 
 body {
   padding: 0;
-  background-color: $color-lightest-green;
+  background-color: $color-beige;
 }
 
 .container {

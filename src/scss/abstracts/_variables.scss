@@ -1,38 +1,32 @@
 @use "sass:color";
 
 // Variables
+/*Color palette: https://coolors.co/79b5bd-0476a0-045982-033b63-3f5560-e45400-fa6f2b-fda974-ffe2bd-edf3d9*/
+$color-moonstone: rgba(121, 181, 189, 1); //#79B5BD
+$color-cerulean: rgba(4, 118, 160, 1); //#0476A0
+$color-lapis-lazuli: rgba(4, 89, 130, 1); //#045982
+$color-indigo-dye: rgba(3, 59, 99, 1); //#033B63
+$color-charcoal: rgba(63, 85, 96, 1); //#3F5560
+$color-persimmon: rgba(228, 84, 0, 1); //#E45400
+$color-orange-crayola: rgba(250, 111, 43, 1); //#FA6F2B
+$color-sandy-brown: rgba(253, 169, 116, 1); //#FDA974
+$color-navajo-white: rgba(255, 226, 189, 1); //#FFE2BD
+$color-beige: rgba(237, 243, 217, 1); //#EDF3D9
 
-/*Color palette: https://coolors.co/b68600-ffc72c-ebdbc1-eaeaea-901a1a-350000-590000*/
+$color-lapis-lazuli-a11y: rgba(4, 85, 125, 1); //#04557D - a11y match for using with small $color-beige text
+$color-persimmon-a11y: rgba(189,70,0); //#BD4600 - a11y match for using with $color-beige background or text. (darker option: #8C3300)
+$color-charcoal-a11y: rgba(62, 83, 94,1); //#3E535E - a11y match for small text against $color-beige background
+$color-mid-orange: rgba(251, 131, 71); //#FB8347 - AA small text a11y against indigo-dye background
+
 $color-dark-yellow: #ffebb2; //#B68600
 $color-light-yellow: #f4edd8; //#FFC72C f4edd8
-$color-off-white: rgba(235, 255, 250, 1); //#EBFFFA
-$color-light-red: #01b98e; //#901A1A
-$color-main-red: #045642; //#590000
-$color-dark-red: #054233; //#350000
-$color-platinum: rgba(234, 234, 234, 1); //#EAEAEA
-$color-placeholder: rgba(74, 70, 67, 1); //#4A4643
-$color-antique-white: rgba(243, 233, 216, 1); //#F3E9D8
-$color-sunset: #eae0d5; //#E1C89D
-$color-text-gray-200: rgba(126, 134, 148, 1); //#7E8694
-$color-charcoal: rgba(63, 79, 95, 1); //#3F4F5F  -- consider gray-300
-$color-khaki: #C6AC8F; //#BBA782
-$color-burlywood: rgba(222, 184, 135, 1); //#DEB887
-
-/*----Colors From Shorthand----*/
-$color-darkest-green: rgba(5,66,51, 1); //#054233
-$color-lightest-green: rgba(237,243,216,1); //#EDF3D8
-$color-background-blue: rgba(2,118,159,1); //#02769F
-$color-darkest-blue: rgba(50,81,109, 1);  //#32516d
-$color-dark-orange: rgb(250, 111, 41, 1); //#FA6F29
-$color-darkest-orange: #924118;
 
 
-/*----------  Colors we're using from template ----------*/
+/*----------  Colors we're still using from template ----------*/
 
 $color-text-white: rgba(250, 250, 250, 1);
 $color-text-main: rgba(51, 51, 51, 1);
 
-$color-text-gray-100: rgba(188, 194, 206, 1);
 $color-text-gray-200: rgba(126, 134, 148, 1);
 $color-text-gray-300: rgba(70, 79, 96, 1);
 $color-text-gray-400: rgba(43, 47, 56, 1);
@@ -46,7 +40,6 @@ $color-background-white: rgba(255, 255, 255, 1);
 
 $color-background-gray-100: rgba(248, 248, 248, 1);
 $color-background-gray-200: rgba(240, 240, 240, 1);
-$color-background-gray-300: rgba(228, 228, 228, 1);
 
 $color-background-light-blue-100: rgba(239, 245, 248, 1);
 

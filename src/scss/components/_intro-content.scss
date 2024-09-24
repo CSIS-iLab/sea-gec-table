@@ -41,18 +41,18 @@ main {
   &__overline {
     &--small {
       @extend %text-style-ui-5-caps;
-      color: $color-darkest-blue;
+      color: $color-indigo-dye;
       margin-bottom: rem(4);
     }
 
     &--regular {
       @extend %text-style-ui-4-caps;
-      color: $color-darkest-blue;
+      color: $color-indigo-dye;
 
       &::after {
         content: "";
         display: block;
-        border-bottom: 2px solid $color-darkest-blue;
+        border-bottom: 2px solid $color-indigo-dye;
         width: 23px;
         height: 2px;
         margin: 0 auto;
@@ -66,14 +66,14 @@ main {
     margin-bottom: rem(48);
 
     @extend %text-style-heading-1;
-    color: $color-darkest-blue;
+    color: $color-indigo-dye;
     text-align: center;
   }
 
   &__introduction {
     margin-bottom: rem(16);
     @extend %text-style-paragraph-1;
-    color: $color-darkest-blue;
+    color: $color-indigo-dye;
   }
 
   &__more {
@@ -85,7 +85,7 @@ main {
   }
 
   &__link {
-    color: $color-light-yellow;
+    color: $color-persimmon-a11y;
     text-decoration: none;
     transition: $transition__link;
 
@@ -97,15 +97,15 @@ main {
     }
 
     .intro-content__more__icon-container {
-      fill: $color-light-yellow;
+      fill: $color-persimmon-a11y;
       transition: $transition__link;
     }
 
     &:hover {
-      color: $color-dark-yellow;
+      color: $color-orange-crayola;
 
       .intro-content__more__icon-container {
-        fill: $color-dark-yellow;
+        fill: $color-orange-crayola;
         transition: $transition__link;
       }
     }
@@ -159,17 +159,17 @@ main {
   &__grid-item {
     font-family: $font-family-default;
     padding: rem(20);
-    outline: 1px solid $color-darkest-blue;
+    outline: 1px solid $color-indigo-dye;
     box-shadow: 0 rem(4) rem(8) rgba(0, 0, 0, 0.1);
     border-radius: 3px;
 
     h1 {
       font-size: 80px;
-      color: $color-darkest-blue;
+      color: $color-indigo-dye;
     }
 
     h2 {
-      color: $color-darkest-orange;
+      color: $color-persimmon;
     }
   }
 
@@ -178,100 +178,6 @@ main {
     &__grid {
       grid-template-columns: 1fr; // Change to 1 column on smaller screens
       grid-template-rows: auto; // Adjust rows accordingly
-    }
-  }
-}
-
-.intro-bar {
-  width: 100%;
-
-  &:first-child {
-    @include breakpoint("medium") {
-      margin-right: 3rem;
-    }
-  }
-
-  &:last-child {
-    margin-top: 2rem;
-    @include breakpoint("medium") {
-      margin-top: 0;
-      margin-left: 3rem;
-    }
-  }
-
-  &__title {
-    margin-bottom: rem(10);
-    @extend %text-style-ui-5-bold-caps;
-  }
-
-  &__content {
-    display: flex;
-  }
-
-  &__column {
-    &--labels div,
-    &--bars .bar {
-      height: rem(24);
-      margin-bottom: rem(12);
-      @extend %text-style-ui-3;
-      line-height: 1;
-    }
-
-    &--labels {
-      width: 40%;
-      margin-right: 2rem;
-
-      @include breakpoint("small") {
-        width: rem(200);
-      }
-
-      div {
-        display: flex;
-        align-items: center;
-      }
-    }
-
-    &--bars {
-      position: relative;
-      display: block;
-      flex-grow: 2;
-      border-right: 1px solid $color-borders-gray-300;
-      border-left: 1px solid $color-borders-gray-300;
-
-      .bar {
-        display: flex;
-        align-items: center;
-        background: $color-background-gray-300;
-        @extend %text-style-ui-4;
-      }
-
-      span {
-        height: 100%;
-        background: $color-text-gray-500;
-        display: inline-block;
-        margin-right: rem(5);
-      }
-
-      &:before,
-      &:after {
-        display: block;
-        position: absolute;
-        top: 100%;
-        width: 20px;
-        color: $color-text-gray-200;
-        text-align: center;
-        @extend %text-style-ui-5;
-      }
-
-      &:before {
-        content: "0";
-        left: -10px;
-      }
-
-      &:after {
-        content: attr(data-total-entries);
-        right: -10px;
-      }
     }
   }
 }
