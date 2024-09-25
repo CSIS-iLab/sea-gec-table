@@ -91,7 +91,7 @@
         color: $color-persimmon;
 
         .icon-container {
-          fill: $color-dark-yellow;
+          fill: $color-persimmon;
         }
       }
     }
@@ -115,11 +115,11 @@
     }
 
     &__link {
-      color: $color-light-yellow;
+      color: #fb8247;
       text-decoration: none;
 
       &:hover {
-        color: $color-dark-yellow;
+        color: #fb8247;
         transition: $transition__link;
       }
 
@@ -175,10 +175,10 @@
       }
 
       &:visited {
-        color: $color-dark-yellow;
+        color: $color-sandy-brown;
 
         .back-top__icon-container {
-          fill: $color-dark-yellow;
+          fill: $color-sandy-brown;
         }
       }
     }

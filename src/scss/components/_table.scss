@@ -12,7 +12,7 @@
 
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 9px $color-dark-yellow;
+    -webkit-box-shadow: inset 0 0 9px $color-navajo-white;
   }
 }
 
@@ -27,7 +27,7 @@
 
 .table__container::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 9px $color-dark-yellow;
+  -webkit-box-shadow: inset 0 0 9px $color-navajo-white;
 }
 
 .table {
@@ -255,8 +255,9 @@
     }
 
     .link a {
-      color: $color-light-yellow;
+      color: $color-beige;
       text-decoration: none;
+      border-bottom: 1px solid $color-beige;
 
       .icon-container {
         margin-left: rem(5);
