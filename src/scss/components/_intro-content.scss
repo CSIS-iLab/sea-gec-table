@@ -49,7 +49,7 @@ main {
 
     &--regular {
       @extend %text-style-ui-4-caps;
-      color: $color-indigo-dye;
+      color: $color-persimmon-a11y;
 
       &::after {
         content: "";
@@ -75,7 +75,7 @@ main {
   &__introduction {
     margin-bottom: rem(16);
     @extend %text-style-paragraph-1;
-    color: $color-indigo-dye;
+    color: $color-persimmon-a11y;
   }
 
   &__more {
@@ -87,11 +87,12 @@ main {
   }
 
   &__link {
-    color: $color-persimmon-a11y;
+    color: $color-lapis-lazuli-a11y;
     text-decoration: none;
     transition: $transition__link;
 
     &--more {
+      border-bottom: 0px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -104,28 +105,30 @@ main {
     }
 
     &:hover {
-      color: $color-orange-crayola;
+      color: $color-persimmon;
 
       .intro-content__more__icon-container {
-        fill: $color-orange-crayola;
+        fill: $color-cerulean;
         transition: $transition__link;
       }
     }
 
     &:visited {
-      color: $color-light-yellow;
+      color: $color-persimmon-a11y;
+      text-decoration: none;
+      border-bottom: none;
 
       .intro-content__more__icon-container {
-        fill: $color-light-yellow;
+        fill: $color-lapis-lazuli-a11y;
       }
     }
 
     &:focus {
       outline-color: $color-focus-outline;
-      color: $color-dark-yellow;
+      color: $color-persimmon;
       .intro-content__more__icon-container {
-        fill: $color-dark-yellow;
-      }
+        fill: $color-lapis-lazuli-a11y;
+      } 
     }
   }
 
