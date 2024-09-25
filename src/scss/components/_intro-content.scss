@@ -151,6 +151,12 @@ main {
       flex-direction: row;
       justify-content: space-between;
     }
+
+    // 3 columns for large screens
+    @include breakpoint("large") {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   // Optional: Style individual grid items
@@ -172,8 +178,15 @@ main {
     h2 {
       color: $color-persimmon;
     }
-    // For larger screens, allow 3 columns
+
+    // 2 columns for medium screens
     @include breakpoint("medium") {
+      flex: 1 1 calc(50% - rem(20)); // Adjust to create 2 columns
+      max-width: calc(50% - rem(20));
+    }
+
+    // 3 columns for large screens
+    @include breakpoint("large") {
       flex: 1 1 calc(33.333% - rem(20)); // Adjust to create 3 columns
       max-width: calc(33.333% - rem(20));
     }
