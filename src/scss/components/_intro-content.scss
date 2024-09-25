@@ -164,6 +164,10 @@ main {
 
   // Optional: Style individual grid items
   &__grid-item {
+    display: flex; // Enable Flexbox on the grid item
+    flex-direction: column; // Stack h1 and h2 vertically
+    justify-content: center; // Center content vertically
+    align-items: center; // Center content horizontally (optional, if you want horizontal centering as well)
     flex: 1 1 100%; // Default to full width on small screens
     max-width: 100%;
     font-family: $font-family-default;
@@ -173,8 +177,17 @@ main {
     border-radius: 3px;
     box-sizing: border-box;
 
+    #biggest-investment-year {
+      font-size: 120px;
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
+
     h1 {
-      font-size: clamp(24px, 5vw, 80px); // Responsive font size
+      font-size: 80px;
+      word-wrap: break-word;
       color: $color-indigo-dye;
     }
 
