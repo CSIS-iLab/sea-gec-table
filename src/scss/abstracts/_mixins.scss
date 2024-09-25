@@ -8,9 +8,10 @@
 =================================*/
 
 // Breakpoints
-// $break: Breakpoint to use
-// $dir: 'min-width' or 'max-width'
-// $until: Maximum width
+// $break: Breakpoint to use (e.g., 'small', 'medium', 'large')
+// $dir: 'min-width' or 'max-width' (defaults to 'min-width')
+// $until: Maximum width breakpoint (optional, if you want to specify a range)
+
 // @include breakpoint('medium');
 // @include breakpoint($break: 'medium', $until: 'large');
 // @include breakpoint($break: 'medium', $dir: 'max-width');
@@ -20,12 +21,15 @@
   $until: null,
   $breakpoints-map: $breakpoints
 ) {
+  // Use the raw value if not found in the map
   @if not map-has-key($breakpoints-map, $break) {
     $break: $break;
   } @else {
+    // Get the value from the map
     $break: map-get($breakpoints-map, $break);
   }
 
+  // Handle the case where both min-width and max-width are provided
   @if $break and $until {
     @if not map-has-key($breakpoints-map, $until) {
       $until: $until;

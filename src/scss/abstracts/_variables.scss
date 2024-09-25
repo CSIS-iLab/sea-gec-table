@@ -62,9 +62,9 @@ $font-line-height-default: 1.15;
 
 /*----------  Structure  ----------*/
 $breakpoints: (
-  "medium": 50em,
-  "large": 90em,
-  // 'large': 90em,
+  "small": 37.5em, // 600px
+  "medium": 50em, // 800px 
+  "large": 90em, // 1440px
 );
 
 // Used to calculate font size in font-clamp mixin.

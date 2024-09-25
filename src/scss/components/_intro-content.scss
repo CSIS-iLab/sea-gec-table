@@ -18,6 +18,8 @@ main {
     align-items: center;
     text-align: center;
     margin-left: 0;
+    flex-wrap: wrap; // allow items to wrap within container
+    overflow: hidden;
 
     @include breakpoint("medium") {
       flex-direction: row;
@@ -127,57 +129,53 @@ main {
     }
   }
 
-  &__graphs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    padding-top: rem(56);
-    padding-bottom: 10rem;
-    justify-content: center;
-    max-width: $size__content-max-width;
-
-    @include breakpoint("medium") {
-      flex-direction: row;
-      max-width: $size__intro-content-wide-max-width;
-    }
-  }
-
   // Add the grid section
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); // 3 columns
-    grid-template-rows: repeat(2, 1fr); // 2 rows
+    display: flex;
+    flex-wrap: wrap;
+    // grid-template-columns: repeat(3, 1fr); // 3 columns
+    // grid-template-rows: repeat(2, 1fr); // 2 rows
     gap: rem(20); // Adjust the gap between grid items
     width: 100%; // Make sure the grid takes full width
     padding: rem(20); // Add padding if needed
     box-sizing: border-box; // Include padding in width calculation
     margin: 0 auto; // Center the grid container
+
+    // Responsive behavior for smaller screens
+    @include breakpoint("small") {
+      flex-direction: column;
+    }
+
+    // Ensure correct behavior on medium and large screens
+    @include breakpoint("medium") {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   // Optional: Style individual grid items
   &__grid-item {
+    flex: 1 1 100%; // Default to full width on small screens
+    max-width: 100%;
     font-family: $font-family-default;
     padding: rem(20);
     outline: 1px solid $color-indigo-dye;
     box-shadow: 0 rem(4) rem(8) rgba(0, 0, 0, 0.1);
     border-radius: 3px;
+    box-sizing: border-box;
 
     h1 {
-      font-size: 80px;
+      font-size: clamp(24px, 5vw, 80px); // Responsive font size
       color: $color-indigo-dye;
     }
 
     h2 {
       color: $color-persimmon;
     }
-  }
-
-  // Responsive behavior
-  @include breakpoint("small") {
-    &__grid {
-      grid-template-columns: 1fr; // Change to 1 column on smaller screens
-      grid-template-rows: auto; // Adjust rows accordingly
+    // For larger screens, allow 3 columns
+    @include breakpoint("medium") {
+      flex: 1 1 calc(33.333% - rem(20)); // Adjust to create 3 columns
+      max-width: calc(33.333% - rem(20));
     }
   }
 }
