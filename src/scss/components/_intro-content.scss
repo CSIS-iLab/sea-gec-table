@@ -7,6 +7,7 @@ main {
 
 .intro-content {
   padding-top: rem(132);
+  padding-bottom: rem(64);
   padding-left: 0;
   padding-right: 0;
   text-align: center;
@@ -79,6 +80,8 @@ main {
   }
 
   &__more {
+    margin-bottom: rem(40);
+
     &__icon-container {
       position: relative;
       margin-right: rem(4);
