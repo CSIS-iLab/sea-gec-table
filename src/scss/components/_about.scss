@@ -115,11 +115,11 @@
     }
 
     &__link {
-      color: #fb8247;
+      color: $color-mid-orange;
       text-decoration: none;
 
       &:hover {
-        color: #fb8247;
+        color: $color-navajo-white;
         transition: $transition__link;
       }
 
