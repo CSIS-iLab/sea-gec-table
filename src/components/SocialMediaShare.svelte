@@ -15,10 +15,10 @@
   </li>
   <li class="social__item">
     <a
-      href="https://twitter.com/csisponi"
+      href="https://x.com/SoutheastAsiaDC"
       class="social__link"
       target="_blank"
-      aria-label="Visit the PONI Twitter page"
+      aria-label="Visit the Southeast Asia Program Twitter page"
     >
       <Icon class="icon__social" name="Icon-twitter" />
     </a>

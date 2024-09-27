@@ -10,8 +10,8 @@ Data coming from `https://docs.google.com/spreadsheets/d/e/update-id-here/pub?ou
 Clone & Install the dependencies...
 
 ```bash
-git clone git@github.com:CSIS-iLab/poni-timeline.git
-cd poni-timeline
+git clone git@github.com:CSIS-iLab/sea-gec-table.git
+cd sea-gec-table
 npm install
 ```
 
