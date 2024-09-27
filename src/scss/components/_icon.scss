@@ -39,8 +39,7 @@
   }
 
   &:hover {
-    filter: invert(53%) sepia(59%) saturate(4508%) hue-rotate(27deg)
-      brightness(99%) contrast(101%);
+    // fill: $color-navajo-white;
   }
 }
 
@@ -51,7 +50,7 @@
 }
 
 .inactive {
-  fill: $color-navajo-white;
+  fill: $color-orange-crayola;
 }
 
 .hide {
