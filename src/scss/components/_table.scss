@@ -174,10 +174,6 @@
     }
   }
 
-  .key-moment {
-    background-color: burlywood;
-  }
-
   .title {
     cursor: pointer;
   }
@@ -267,8 +263,8 @@
       }
 
       &:hover {
-        color: $color-navajo-white;
-        border-bottom: 1px solid $color-navajo-white;
+        color: $color-sandy-brown;
+        border-bottom: 0px;
         transition: $transition__link;
 
         .icon-container {
