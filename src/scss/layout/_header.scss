@@ -42,22 +42,20 @@
     }
 
     &:hover {
-      filter: invert(53%) sepia(59%) saturate(4508%) hue-rotate(27deg)
-        brightness(99%) contrast(101%);
+      filter: brightness(0) saturate(100%) invert(60%) sepia(39%) saturate(1110%) hue-rotate(329deg) brightness(101%) contrast(97%); // $color-mid-orange;
     }
   }
 
   a,
   button {
     &:hover {
-      // color brand-blue-600
-      filter: invert(53%) sepia(59%) saturate(4508%) hue-rotate(27deg)
-        brightness(99%) contrast(101%);
+      filter: brightness(0) saturate(100%) invert(60%) sepia(39%) saturate(1110%) hue-rotate(329deg) brightness(101%) contrast(97%); // $color-mid-orange;
       color: $color-focus-outline;
       transition: $transition__link;
     }
 
     &:focus {
+      // filter: brightness(0) saturate(100%) invert(60%) sepia(39%) saturate(1110%) hue-rotate(329deg) brightness(101%) contrast(97%); // $color-mid-orange;  
       outline: 4px solid $color-focus-outline;
       border-radius: 1px;
     }

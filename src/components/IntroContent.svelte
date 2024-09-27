@@ -26,7 +26,7 @@
           >
         </p>
         <!--GRID-->
-        <div class="intro-content__grid">
+        <!-- <div class="intro-content__grid">
           <div class="intro-content__grid-item">
             <iframe
               src="https://flo.uri.sh/visualisation/19490897/embed"
@@ -72,7 +72,7 @@
             <h1>$7.5 Billion</h1>
             <h2>Single Largest Investment</h2>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </main>

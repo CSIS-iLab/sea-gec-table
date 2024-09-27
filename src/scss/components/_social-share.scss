@@ -10,16 +10,17 @@
   &__link {
     @include font-size(16px);
     padding: rem(8);
-    color: $color-persimmon-a11y;
+    color: $color-beige;
     transition: $transition__link;
-    fill: $color-persimmon-a11y;
+    fill: $color-beige;
 
     &:hover {
-      fill: $color-orange-crayola;
+      fill: $color-mid-orange;
     }
 
     &:focus {
       outline: 3px solid $color-focus-outline;
+      fill: $color-mid-orange;
     }
   }
 }
@@ -34,16 +35,16 @@
   &__link {
     @include font-size(16px);
     padding: rem(8);
-    color: $color-mid-orange;
-    fill: $color-mid-orange;
+    color: $color-beige;
+    fill: $color-beige;
     transition: $transition__link;
 
     &:hover {
-      fill: $color-navajo-white;
+      fill: $color-mid-orange;
     }
 
     &:focus {
-      fill: $color-navajo-white;
+      fill: $color-mid-orange;
       outline: 3px solid $color-focus-outline;
     }
   }

@@ -2,7 +2,7 @@
 
 .footer {
   @extend %text-style-paragraph-2;
-  color: $color-mid-orange;
+  color: $color-beige;
   padding-top: rem(48);
   padding-bottom: rem(32);
   padding-right: var(--container-padding);
@@ -41,11 +41,11 @@
   }
 
   a {
-    color: $color-mid-orange;
+    color: $color-beige;
     transition: color 0.3s ease-in-out;
 
     &:hover {
-      color: $color-navajo-white;
+      color: $color-mid-orange;
       text-decoration: none;
     }
   }
@@ -59,7 +59,7 @@
     margin-bottom: rem(24);
 
     a {
-      color: $color-mid-orange;
+      color: $color-beige;
       transition: color 0.3s ease-in-out;
 
       &:hover {
@@ -86,7 +86,7 @@
 
   &__address {
     grid-area: address;
-    color: $color-mid-orange;
+    color: $color-beige;
     margin-top: rem(11);
     font-style: normal;
 
@@ -109,7 +109,7 @@
     }
 
     a {
-      color: $color-mid-orange;
+      color: $color-beige;
       transition: color 0.3s ease-in-out;
 
       &:hover {
@@ -121,7 +121,7 @@
 
   &__copyright {
     grid-area: copyright;
-    color: $color-mid-orange;
+    color: $color-beige;
     @extend %text-style-ui-4;
     margin-top: rem(32);
 
