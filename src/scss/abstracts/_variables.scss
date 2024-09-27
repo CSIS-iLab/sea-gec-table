@@ -49,10 +49,11 @@ $color-brand-blue-800: rgba(1, 43, 105, 1);
 $font__expo-serif-pro: "Expo Serif Pro", serif;
 $font__source-sans-pro: "Source Sans 3", sans-serif;
 $font__synthese: "Synthese", sans-serif;
+$font__abel: "Abel", sans-serif;
 
-$font-family-default: $font__source-sans-pro;
-$font-family-heading: $font__synthese;
-$font-size-default: 16px;
+$font-family-default: $font__abel;
+$font-family-heading: $font__abel;
+$font-size-default: 18px;
 $font-weight-default: 400;
 $font-weight-bold: 800;
 $font-line-height-default: 1.15;

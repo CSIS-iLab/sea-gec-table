@@ -2,50 +2,50 @@
 @use "mixins" as *;
 
 %text-style-heading-1 {
-  @include font-clamp(36px, 53px);
+  @include font-clamp(56px, 76px);
   font-family: $font-family-heading;
   font-weight: $font-weight-bold;
   line-height: 1.1;
 }
 
 %text-style-heading-2 {
-  @include font-clamp(28px, 32px);
+  @include font-clamp(48px, 52px);
   font-family: $font-family-default;
   font-weight: $font-weight-bold;
 }
 
 %text-style-heading-3 {
-  @include font-clamp(24px, 28px);
+  @include font-clamp(44px, 48px);
   font-family: $font-family-default;
   font-weight: $font-weight-bold;
 }
 
 %text-style-heading-4 {
-  @include font-clamp(21px, 24px);
+  @include font-clamp(41px, 44px);
   font-family: $font-family-default;
   font-weight: $font-weight-bold;
 }
 
 %text-style-heading-5 {
-  @include font-size(20px);
+  @include font-size(40px);
   font-family: $font-family-default;
   font-weight: $font-weight-bold;
 }
 
 %text-style-heading-6 {
-  @include font-size(18px);
+  @include font-size(38px);
   font-family: $font-family-default;
   font-weight: $font-weight-bold;
 }
 
 %text-style-paragraph-1 {
-  @include font-size(18px);
+  @include font-size(20px);
   font-family: $font-family-default;
   line-height: 1.4;
 }
 
 %text-style-paragraph-2 {
-  @include font-size(16px);
+  @include font-size(18px);
   font-family: $font-family-default;
   line-height: 1.3;
 }
@@ -61,7 +61,7 @@
 }
 
 %text-style-ui-1 {
-  @include font-size(18px);
+  @include font-size(20px);
   font-family: $font-family-default;
   line-height: 1.2;
 }
@@ -73,7 +73,7 @@
 
 %text-style-ui-2 {
   @extend %text-style-ui-1;
-  @include font-size(16px);
+  @include font-size(18px);
 }
 
 %text-style-ui-2-bold {
@@ -114,7 +114,7 @@
 
 %text-style-ui-5 {
   @extend %text-style-ui-4;
-  @include font-size(13px);
+  @include font-size(18px);
   line-height: 1;
 }
 
