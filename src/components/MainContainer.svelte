@@ -18,10 +18,7 @@
     console.log(dataset.data)
     return dataset.data
       .filter((row) => {
-        const rowDate = new Date(row.date_string)
-        const rowYear = rowDate.getFullYear()
-        const rowMonth = rowDate.toLocaleString("default", { month: "long" })
-
+        const rowYear = row.date
         const matchesYear = selectedYear ? rowYear === selectedYear : true
         const matchesMonth = selectedMonth ? rowMonth === selectedMonth : true
         const isSelectedSector = selectedSector

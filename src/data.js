@@ -50,32 +50,30 @@ function createYearList(data) {
 
   // Loop through each row in the dataset
   data.forEach((row) => {
-    // Extract the year from the date_string and add it to the Set
-    const year = new Date(row.date_string).getFullYear()
-    uniqueYearsSet.add(year)
-  })
+    // Extract the year directly from the string and treat it as a number
+    const year = parseInt(row.date_string, 10);
+    uniqueYearsSet.add(year);
+  });
 
   // Convert the Set of unique years to an array and sort it
   return Array.from(uniqueYearsSet).sort((a, b) => a - b) // Numeric sort
 }
 
 function createAndAssignDateObjects(array) {
-  let dates = []
-  let date_string = []
+  let dates = [];
+  let date_string = [];
 
   for (let i = 0; i < array.length; i++) {
-    let date = array[i].date_string
-
-    let dateObject = new Date(date)
-    array[i].date = dateObject
+    let year = parseInt(array[i].date_string, 10); // Extract the year as a number
+    array[i].date = year; // Store the year directly
 
     if (!date_string.includes(array[i].date_string)) {
-      date_string.push(array[i].date_string)
-      dates.push(dateObject)
+      date_string.push(array[i].date_string);
+      dates.push(year); // Push the year instead of a Date object
     }
   }
 
-  return dates
+  return dates;
 }
 
 function formatInvestmentAuthority(array) {
