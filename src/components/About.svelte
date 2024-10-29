@@ -18,7 +18,7 @@
             class="about__reports__link"
             href="https://www.csis.org/programs/southeast-asia-program"
             target="_blank"
-            >Digital Report Link Goes Here<span class="icon-container"
+            >U.S. Investmentin the Philippines: The Next Era of EconomicPartnership & Opportunity<span class="icon-container"
               ><Icon class="icon__report" name="Icon-open-blank" /></span
             ></a
           >
