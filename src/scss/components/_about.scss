@@ -52,7 +52,7 @@
 
     &__link {
       @extend %text-style-ui-2;
-      color: #fb8247;
+      color: $color-sandy-brown;
       text-decoration: none;
 
       &--back-top {
@@ -64,7 +64,7 @@
 
       .icon-container {
         margin-left: rem(4);
-        fill: $color-mid-orange;
+        fill: $color-sandy-brown;
       }
 
       &:hover {
@@ -115,7 +115,7 @@
     }
 
     &__link {
-      color: $color-mid-orange;
+      color: $color-sandy-brown;
       text-decoration: none;
 
       &:hover {
@@ -145,10 +145,10 @@
 
     &__link {
       @extend %text-style-ui-3;
-      color: $color-mid-orange;
+      color: $color-sandy-brown;
 
       .back-top__icon-container {
-        fill: $color-mid-orange;
+        fill: $color-sandy-brown;
         transition: $transition__link;
       }
 

@@ -36,11 +36,9 @@
         Strategic and International Studies.
       </p>
       <p class="about__development__description">
-        Produced by Mariel de la Garza, José Romero, and Lindsay Urchyk.
+        Produced by Mariel de la Garza.
         <br />
-        Copyediting by ____________________.
-        <br />
-        Cover design by ________________.
+        Copyediting by Madison Bruno.
       </p>
     </div>
     <div class="back-top-container">

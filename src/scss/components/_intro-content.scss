@@ -91,10 +91,10 @@ main {
   }
 
   &__link {
-    color: $color-mid-orange;
+    color: $color-sandy-brown;
     text-decoration: none;
     transition: $transition__link;
-    border-bottom: 1px solid $color-mid-orange;
+    border-bottom: 1px solid $color-sandy-brown;
 
 
     &--more {
@@ -106,7 +106,7 @@ main {
     }
 
     .intro-content__more__icon-container {
-      fill: $color-mid-orange;
+      fill: $color-sandy-brown;
       transition: $transition__link;
     }
 
