@@ -9,9 +9,9 @@
         <p class="intro-content__overline--regular">
           By the Southeast Asia Program
         </p>
-        <h1 class="intro-content__title">US Investments in the Philippines</h1>
+        <h1 class="intro-content__title">U.S. Investments in the Philippines</h1>
         <p class="intro-content__introduction">
-          A curated database of US investments in the Philippines over the last
+          A curated database of U.S. investments in the Philippines over the last
           10 years, from the <a
             class="intro-content__link"
             href="https://www.csis.org/programs/southeast-asia-program"
