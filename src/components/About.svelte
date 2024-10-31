@@ -16,7 +16,7 @@
         <li>
           <a
             class="about__reports__link"
-            href="https://www.csis.org/programs/southeast-asia-program"
+            href="https://features.csis.org/us-philippines-economic-partnership/ "
             target="_blank"
             >U.S. Investment in the Philippines: The Next Era of Economic Partnership & Opportunity<span class="icon-container"
               ><Icon class="icon__report" name="Icon-open-blank" /></span
