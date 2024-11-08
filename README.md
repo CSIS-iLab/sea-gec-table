@@ -2,7 +2,7 @@
 
 ### Quick Start Instructions
 
-This repo uses `node v21.7.3 (npm v10.5.0)`
+This repo uses `v22.11.0 (npm v10.9.0)` and Svelte 5
 
 @TODO: Update with final link to data: 
 Data coming from `https://docs.google.com/spreadsheets/d/e/update-id-here/pub?output=csv`
@@ -15,7 +15,7 @@ cd sea-gec-table
 npm install
 ```
 
-...then start [Rollup](https://rollupjs.org):
+...then start it:
 
 ```bash
 npm run dev
@@ -27,11 +27,8 @@ Navigate to [localhost:8080](http://localhost:8080). You should see your app run
 
 ### Building and running in production mode
 
-To create an optimised version of the app:
+Netlify is in charge to deploy. So every time a branch is merge into main netlify will automatically deploy it.
 
-```bash
-npm run build
-```
 
 You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
 

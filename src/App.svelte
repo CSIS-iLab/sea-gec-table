@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import getData from "./data";
-  import MainContainer from "./components/MainContainer.svelte";
+  import MainContainer from "./lib/MainContainer.svelte";
 
   let dataset = {};
 
@@ -15,7 +15,7 @@
   <MainContainer {dataset} />
 {:else}
   <div class="loading-container">
-    <div class="loading" />
+    <div class="loading"></div>
   </div>
 {/if}
 
