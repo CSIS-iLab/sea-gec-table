@@ -75,28 +75,28 @@
       a.tableItem.title < b.tableItem.title
         ? -1 * sortModifier
         : a.tableItem.title > b.tableItem.title
-        ? 1 * sortModifier
-        : 0
+          ? 1 * sortModifier
+          : 0
 
     let sortDate = (a, b) =>
       a.date < b.date
         ? -1 * sortModifier
         : a.date > b.date
-        ? 1 * sortModifier
-        : 0
+          ? 1 * sortModifier
+          : 0
 
     let sortColumnName = (a, b) =>
       a[column] < b[column]
         ? -1 * sortModifier
         : a[column] > b[column]
-        ? 1 * sortModifier
-        : 0
+          ? 1 * sortModifier
+          : 0
 
     //Sort by timeline event title
     if (column == "event") {
       console.log(
         "filteredData",
-        (filteredData = filteredData.sort(sortTableItem)),
+        (filteredData = filteredData.sort(sortTableItem))
       )
       return (filteredData = filteredData.sort(sortTableItem))
     }
@@ -106,8 +106,8 @@
         a.amount < b.amount
           ? -1 * sortModifier
           : a.amount > b.amount
-          ? 1 * sortModifier
-          : 0,
+            ? 1 * sortModifier
+            : 0
       )
       console.log("filteredData", filteredData)
       return
@@ -122,7 +122,7 @@
       icon.classList.remove("sort-icon--active")
     })
     const divTableItem = document.querySelector(
-      ".table__cell--header__container__event",
+      ".table__cell--header__container__event"
     )
     divTableItem.children[1].children[1].classList.add("sort-icon--active")
     // Sync horizontal scroll of table header and table body
@@ -147,21 +147,24 @@
 
   function formatCurrency(value) {
     if (value >= 1_000_000_000) {
-      let billionValue = (value / 1_000_000_000).toFixed(1);
-      billionValue = billionValue.endsWith('.0') ? billionValue.slice(0, -2) : billionValue;
-      return `$${billionValue} billion`;
+      let billionValue = (value / 1_000_000_000).toFixed(1)
+      billionValue = billionValue.endsWith(".0")
+        ? billionValue.slice(0, -2)
+        : billionValue
+      return `$${billionValue} billion`
     } else if (value >= 1_000_000) {
-      let millionValue = (value / 1_000_000).toFixed(1);
-      millionValue = millionValue.endsWith('.0') ? millionValue.slice(0, -2) : millionValue;
-      return `$${millionValue} million`;
+      let millionValue = (value / 1_000_000).toFixed(1)
+      millionValue = millionValue.endsWith(".0")
+        ? millionValue.slice(0, -2)
+        : millionValue
+      return `$${millionValue} million`
     } else {
       return new Intl.NumberFormat("en-US", {
         style: "currency",
-        currency: "USD"
-      }).format(value);
+        currency: "USD",
+      }).format(value)
     }
   }
-
 </script>
 
 <div class="table__wrapper">
@@ -181,7 +184,7 @@
                   ? (e) => sort(e, name)
                   : ""}
               >
-              <span>{name}</span>
+                <span>{name}</span>
                 {#if sortByColumns.includes(name.toLowerCase())}
                   <div
                     class="sort-icons-container"
@@ -254,14 +257,16 @@
                       Source(s):
                       {#each rows.tableItem.sources as source, index}
                         {#if source[0] != ""}
-                          <span><a
-                            href={source[0]}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >{source[1]}{#if index == 0 && rows.tableItem.sources[1][0] != ""}
-                              , 
-                            {/if}
-                          </a> </span>
+                          <span
+                            ><a
+                              href={source[0]}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >{source[1]}{#if index == 0 && rows.tableItem.sources[1][0] != ""}
+                                ,
+                              {/if}
+                            </a>
+                          </span>
                         {/if}
                       {/each}
                     </div>
@@ -273,7 +278,10 @@
         {:else}
           <!-- if filters return an empty table -->
           <tr>
-            <td class="table__body__cell table__body__cell--no-data" colspan="6">
+            <td
+              class="table__body__cell table__body__cell--no-data"
+              colspan="6"
+            >
               <p class="table__body__cell__no-data__title">0 entries found.</p>
               <p class="table__body__cell__no-data__desc">
                 Try changing or removing filters to adjust the results.
@@ -281,7 +289,7 @@
             </td>
           </tr>
         {/each}
-      </tbody>      
+      </tbody>
     </table>
   </div>
 </div>
@@ -289,6 +297,21 @@
 <style lang="scss">
   @use "../scss/abstracts/" as *;
   @use "../scss/components/table";
+
+  :global(
+      .title--active .table__body__cell__title-container .icon-container::before
+    ) {
+    transform: rotate(-45deg);
+    transition: $transition__link;
+  }
+
+  :global(
+      .title--active .table__body__cell__title-container .icon-container::after
+    ) {
+    transform: rotate(45deg);
+    transition: $transition__link;
+  }
+
   :global(.tippy-box[data-theme~="poni"]) {
     @extend %text-style-ui-4;
     color: $color-text-gray-500;
